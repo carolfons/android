@@ -49,12 +49,14 @@
         android:textColor="@color/white"/>
 
     <ListView
+        android:id="@+id/lv_lista_pacotes"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_pacote"
         />
 
 
