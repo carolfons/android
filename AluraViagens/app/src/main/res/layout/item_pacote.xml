@@ -61,16 +61,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:textSize="20sp"
-                android:textStyle="italic"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="8dp"
-                tools:text="@sample/pacote.json/pacote/dias" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -78,6 +68,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/view_divisor"
                 tools:text="@sample/pacote.json/pacote/dias" />
+
+            <TextView
+                android:id="@+id/tv_preco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/tv_dias"
+                app:layout_constraintTop_toBottomOf="@id/tv_dias"
+                tools:text="@sample/pacote.json/pacote/preco" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
