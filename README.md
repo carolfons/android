@@ -11,7 +11,7 @@
   - [x] Android parte I: criando um app Mobile
   - [x] Android parte II: avançando com listeners, menu e UI
   - [x] Android parte III: refinando o projeto
-  - [ ] Layouts Android parte I: Criando telas com Constraint Layouts
+  - [x] Layouts Android parte I: Criando telas com Constraint Layouts
   - [ ] Layouts Android parte II: boas práticas para criação de telas
   - [ ] Recycler View parte I: Listas flexíveis e performáticas
   - [ ] Recycler View parte II: Listeners, animações e boas práticas
