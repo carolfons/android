@@ -1,5 +1,7 @@
 package br.com.alura.aluraviagens.ui.activity;
 
+import static br.com.alura.aluraviagens.ui.activity.PacoteActivityConstantes.CHAVE_PACOTE;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -36,11 +38,13 @@ public class ListaPacotesActivity extends AppCompatActivity {
         listaDePacotes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
                 Pacote pacoteSelecionado = pacotes.get(position);
-                Intent intent = new Intent(ListaPacotesActivity.this, ResumoPacoteActivity.class);
+                vaiParaResumoPacote(pacoteSelecionado);
+            }
 
-                intent.putExtra("pacote",pacoteSelecionado);
+            private void vaiParaResumoPacote(Pacote pacoteSelecionado) {
+                Intent intent = new Intent(ListaPacotesActivity.this, ResumoPacoteActivity.class);
+                intent.putExtra(CHAVE_PACOTE, pacoteSelecionado);
                 startActivity(intent);
             }
         });
