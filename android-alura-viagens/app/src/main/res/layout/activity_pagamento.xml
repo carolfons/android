@@ -7,12 +7,10 @@
     tools:context=".ui.activity.PagamentoActivity">
 
     <TextView
-        android:id="@+id/tv_pagamento"
+        android:id="@+id/tv_pagamento_orientacao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
         android:text="Digite as informações do cartão de crédito que você deseja usar para o pagamento"
         android:textAlignment="center"
         android:textStyle="bold"
@@ -25,10 +23,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="20dp"
-        android:text="Valor da compra:"
+        android:text = "@string/valor_da_compra"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pagamento" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_pagamento_orientacao" />
 
     <TextView
         android:id="@+id/tv_pagamento_preco"
@@ -45,10 +44,8 @@
         android:id="@+id/et_pagamento_ncartao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Número do cartão"
+        android:layout_margin="8dp"
+        android:hint="@string/numero_do_cartao"
         android:maxLength="12"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +56,7 @@
         android:id="@+id/et_pagamento_mes_cartao"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:hint="MM"
+        android:hint="@string/mes_cartao"
         android:inputType="number"
         android:maxLength="2"
         android:textAlignment="center"
@@ -71,7 +68,7 @@
         android:id="@+id/et_pagamento_ano_cartao"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:hint="AA"
+        android:hint="@string/ano_cartao"
         android:inputType="number"
         android:maxLength="2"
         android:textAlignment="center"
@@ -85,7 +82,7 @@
         android:inputType="number"
         android:textAlignment="center"
         android:maxLength="3"
-        android:hint="CVC"
+        android:hint="@string/cvc_pagamento"
         android:drawableStart="@drawable/ic_cvc_cartao_de_credito"
         android:drawableLeft="@drawable/ic_cvc_cartao_de_credito"
         app:layout_constraintTop_toBottomOf="@id/et_pagamento_ncartao"
@@ -96,7 +93,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:hint="Nome no cartão"
+        android:digits="@string/mascara_nome_cartao"
+        android:hint="@string/nome_cartao"
         app:layout_constraintEnd_toEndOf="@+id/et_pagamento_cvc"
         app:layout_constraintStart_toStartOf="@+id/et_pagamento_mes_cartao"
         app:layout_constraintTop_toBottomOf="@+id/et_pagamento_mes_cartao" />
@@ -107,11 +105,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/round_button"
-        android:text="Finalizar compra"
+        android:text="@string/finalizar_compra"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="@+id/et_pagamento_nome_cartao"
         app:layout_constraintStart_toStartOf="@+id/et_pagamento_nome_cartao"
         app:layout_constraintTop_toBottomOf="@+id/et_pagamento_nome_cartao" />
 
-    
+
 </androidx.constraintlayout.widget.ConstraintLayout>
