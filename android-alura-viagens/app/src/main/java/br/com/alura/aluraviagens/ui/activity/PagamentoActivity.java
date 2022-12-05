@@ -25,17 +25,25 @@ public class PagamentoActivity extends AppCompatActivity {
 
         setTitle(TITULO_APPBAR);
 
-        Pacote pacoteSp = new Pacote("São Paulo", "sao_paulo_sp",2,new BigDecimal("243.99"));
-        mostraPreco(pacoteSp);
+        Intent intent = getIntent();
+        if(intent.hasExtra("pacote")){
 
-        Button botaoFinalizaCompra = findViewById(R.id.pagamento_botao_finaliza_compra);
-        botaoFinalizaCompra.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(PagamentoActivity.this, ResumoCompraActivity.class);
-                startActivity(intent);
-            }
-        });
+            final Pacote pacote = (Pacote) intent.getSerializableExtra("pacote");
+            mostraPreco(pacote);
+
+            Button botaoFinalizaCompra = findViewById(R.id.pagamento_botao_finaliza_compra);
+            botaoFinalizaCompra.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(PagamentoActivity.this, ResumoCompraActivity.class);
+                    intent.putExtra("pacote",pacote);
+                    startActivity(intent);
+                }
+            });
+        }
+
+
+
 
     }
 
